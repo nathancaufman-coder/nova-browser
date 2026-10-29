@@ -1,0 +1,36 @@
+{
+  "name": "nova-browser",
+  "version": "1.1.0",
+  "description": "A minimalist desktop web browser",
+  "main": "src/main.js",
+  "author": "NOVA Browser",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^36.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.nova.browser",
+    "productName": "NOVA Browser",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

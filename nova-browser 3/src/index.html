@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NOVA Browser</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="chrome"><div class="tabs" id="tabs"><div class="brand"><span class="brand-mark">✦</span><span>NOVA</span></div></div><button class="new-tab" id="newTab" title="New tab">+</button></header>
+<nav class="toolbar">
+<div class="nav-actions"><button class="icon-btn" id="back" title="Back" disabled>←</button><button class="icon-btn" id="forward" title="Forward" disabled>→</button><button class="icon-btn" id="reload" title="Reload">↻</button><button class="icon-btn" id="home" title="Home">⌂</button></div>
+<form class="address-wrap" id="addressForm"><span class="secure-icon">◈</span><input id="address" type="text" spellcheck="false" autocomplete="off" placeholder="Search or enter an address"><button class="go-btn" type="submit">↵</button></form>
+<button class="icon-btn" id="bookmark" title="Bookmark this page">☆</button><button class="icon-btn" id="privateTab" title="New private tab">◉</button><button class="icon-btn" id="historyBtn" title="History">◷</button><button class="icon-btn" id="downloadsBtn" title="Downloads">↓</button><button class="icon-btn" id="settingsBtn" title="Settings">⚙</button><button class="profile">N</button>
+</nav>
+<section class="bookmarks"><span class="bookmarks-label">FAVOURITES</span><button class="bookmark-link" data-url="https://www.google.com">Google</button><button class="bookmark-link" data-url="https://www.youtube.com">YouTube</button><button class="bookmark-link" data-url="https://www.wikipedia.org">Wikipedia</button><span class="bookmark-separator"></span><div id="savedBookmarks"></div></section>
+<div class="overlay hidden" id="panelOverlay"><section class="panel" id="panel">
+<div class="panel-head"><div><div class="eyebrow" id="panelEyebrow">NOVA</div><h2 id="panelTitle">Settings</h2></div><button class="panel-close" id="panelClose">×</button></div>
+<div id="panelContent"></div>
+</section></div>
+<script src="renderer.js"></script>
+</body></html>
